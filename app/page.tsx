@@ -1,94 +1,81 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <header className={styles.header}>
+        <nav className={styles.nav}>
+          <div className={styles.logo}>
+            <h1 className="gradient-text">CrTiers</h1>
+          </div>
+          <div className={styles.navLinks}>
+            <a href="/" className={styles.navLink}>Home</a>
+            <a href="/leaderboards" className={styles.navLink}>Leaderboards</a>
+            <a href="/server" className={styles.navLink}>Server</a>
+            <a href="/more" className={styles.navLink}>More</a>
+          </div>
+        </nav>
+      </header>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className={styles.main}>
+        <section className={styles.hero}>
+          <h1 className={styles.heroTitle}>
+            Welcome to <span className="gradient-text">CrTiers</span>
+          </h1>
+          <p className={styles.heroDescription}>
+            Professional Minecraft player rankings and tier system. Track your progress across multiple game modes.
+          </p>
+          <div className={styles.heroButtons}>
+            <a href="/leaderboards" className="btn-primary">View Rankings</a>
+            <a href="/server" className={styles.btnSecondary}>Join Server</a>
+          </div>
+        </section>
+
+        <section className={styles.features}>
+          <div className={styles.featureGrid}>
+            <div className="card">
+              <h3>🏆 Leaderboards</h3>
+              <p>View comprehensive rankings across all game modes including Overall, Vanilla, UHC, Pot, and more.</p>
+              <a href="/leaderboards" className={styles.featureLink}>Explore Rankings →</a>
+            </div>
+            
+            <div className="card">
+              <h3>🎮 Server</h3>
+              <p>Connect to our Minecraft server and start climbing the ranks. IP: crystaltiers.club</p>
+              <a href="/server" className={styles.featureLink}>Server Info →</a>
+            </div>
+            
+            <div className="card">
+              <h3>📊 Tier System</h3>
+              <p>Advanced tier-based ranking from F to S+ with region-based categorization and detailed statistics.</p>
+              <a href="/more" className={styles.featureLink}>Learn More →</a>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.stats}>
+          <div className={styles.statsGrid}>
+            <div className={styles.statItem}>
+              <h3>2+</h3>
+              <p>Active Players</p>
+            </div>
+            <div className={styles.statItem}>
+              <h3>8</h3>
+              <p>Game Modes</p>
+            </div>
+            <div className={styles.statItem}>
+              <h3>24/7</h3>
+              <p>Server Uptime</p>
+            </div>
+          </div>
+        </section>
       </main>
+
       <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className={styles.footerContent}>
+          <p>&copy; 2024 CrTiers. All rights reserved.</p>
+          <p>Server IP: <span className="gradient-text">crystaltiers.club</span></p>
+        </div>
       </footer>
     </div>
   );

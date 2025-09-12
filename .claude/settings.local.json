@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:crystaltiers.com)",
+      "Bash(npm install:*)",
+      "Bash(move page.tsx page_backup.tsx)",
+      "Bash(move page_new.tsx page.tsx)",
+      "Bash(move:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
