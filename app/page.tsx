@@ -36,7 +36,7 @@ export default function Home() {
             <div className="card">
               <h3>🏆 Leaderboards</h3>
               <p>View comprehensive rankings across all game modes including Overall, Vanilla, UHC, Pot, and more.</p>
-              <a href="/leaderboards" className={styles.featureLink}>Explore Rankings →</a>
+              <a href="/crtiers-remake/leaderboards" className={styles.featureLink}>Explore Rankings →</a>
             </div>
             
             <div className="card">
