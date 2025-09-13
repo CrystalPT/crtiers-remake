@@ -7,13 +7,18 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams(): Promise<{ username: string }[]> {
-  // Generate a few common hidden player names for static generation
-  // Real usernames will be handled by the client-side routing
+  // For static export, we need to pre-generate some common routes
+  // The client will handle dynamic usernames at runtime
   return [
-    { username: 'hiddenplayer1' },
-    { username: 'hiddenplayer2' },
-    { username: 'hiddenplayer3' },
-    { username: 'testuser' },
+    { username: 'steve' },
+    { username: 'alex' },
+    { username: 'notch' },
+    { username: 'jeb' },
+    { username: 'dinnerbone' },
+    { username: 'grumm' },
+    { username: 'player' },
+    { username: 'user' },
+    { username: 'test' },
     { username: 'example' },
   ];
 }
