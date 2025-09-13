@@ -132,6 +132,7 @@
 .avatarContainer {
   display: flex;
   flex-direction: column;
+
   align-items: center;
   gap: 1rem;
   min-width: 200px;
@@ -141,9 +142,9 @@
   width: 122px;
   height: 256px;
   border-radius: 12px;
-  border: 3px solid #ffd700;
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.4);
-  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+
+  border: 3px solid var(--primary);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);
 }
 
 .playerName {
@@ -154,11 +155,10 @@
   font-size: 2rem;
   font-weight: 800;
   margin: 0 0 0.5rem 0;
-  background: linear-gradient(135deg, #ffd700, #ff6b6b);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
 }
 
 .nameMcLink {
@@ -177,18 +177,17 @@
 }
 
 .gameModeTabsContainer {
-  background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(255, 107, 107, 0.1));
-  border: 2px solid rgba(255, 215, 0, 0.3);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15);
 }
 
 .gameModeTabs {
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-  background: rgba(255, 215, 0, 0.05);
+  border-bottom: 1px solid var(--border);
+  background: rgba(99, 102, 241, 0.05);
 }
 
 .gameModeTab {
@@ -206,15 +205,14 @@
 }
 
 .gameModeTab:hover {
-  background: rgba(255, 215, 0, 0.15);
+  background: rgba(99, 102, 241, 0.1);
   color: var(--foreground);
 }
 
 .gameModeTab.active {
-  background: rgba(255, 215, 0, 0.2);
-  color: #ffd700;
-  border-bottom-color: #ffd700;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--primary);
+  border-bottom-color: var(--primary);
 }
 
 .tabIcon {
@@ -227,7 +225,6 @@
 
 .statsContent {
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 107, 107, 0.05));
 }
 
 .statsGrid {
@@ -237,20 +234,18 @@
 }
 
 .statCard {
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 107, 107, 0.1));
-  border: 2px solid rgba(255, 215, 0, 0.3);
-  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 8px;
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15);
 }
 
 .statCard:hover {
-  transform: translateY(-4px);
-  border-color: #ffd700;
-  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25);
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 107, 107, 0.15));
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
 }
 
 .statCard h3 {
@@ -265,7 +260,6 @@
   font-size: 2rem;
   font-weight: 800;
   color: var(--foreground);
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 .tierValue {
@@ -279,57 +273,11 @@
   font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-}
-
-.tierF {
-  background: linear-gradient(135deg, #666, #999);
-  color: #fff;
-}
-
-.tierE {
-  background: linear-gradient(135deg, #8b4513, #daa520);
-  color: #fff;
-}
-
-.tierD {
-  background: linear-gradient(135deg, #cd7f32, #ffa500);
-  color: #fff;
-}
-
-.tierC {
-  background: linear-gradient(135deg, #c0c0c0, #e6e6e6);
-  color: #000;
-}
-
-.tierB {
-  background: linear-gradient(135deg, #ffd700, #ffed4e);
-  color: #000;
-}
-
-.tierA {
-  background: linear-gradient(135deg, #00ff00, #32cd32);
-  color: #000;
-}
-
-.tierS {
-  background: linear-gradient(135deg, #ff69b4, #ff1493);
-  color: #fff;
 }
 
 .tierSPlus {
   background: linear-gradient(135deg, #ff6b6b, #ffd93d);
   color: #000;
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-  }
-  to {
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
-  }
 }
 
 .region {
@@ -337,37 +285,6 @@
   border-radius: 20px;
   font-size: 1.2rem;
   font-weight: 600;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-}
-
-.regionNA {
-  background: linear-gradient(135deg, #4169e1, #87ceeb);
-  color: #fff;
-}
-
-.regionEU {
-  background: linear-gradient(135deg, #32cd32, #90ee90);
-  color: #000;
-}
-
-.regionAS {
-  background: linear-gradient(135deg, #ff6347, #ffa07a);
-  color: #fff;
-}
-
-.regionOC {
-  background: linear-gradient(135deg, #9932cc, #dda0dd);
-  color: #fff;
-}
-
-.regionSA {
-  background: linear-gradient(135deg, #ffd700, #ffff00);
-  color: #000;
-}
-
-.regionAF {
-  background: linear-gradient(135deg, #ff8c00, #ffa500);
-  color: #fff;
 }
 
 .footer {
@@ -434,7 +351,7 @@
   
   .gameModeTab.active {
     border-bottom: none;
-    border-right-color: #ffd700;
+    border-right-color: var(--primary);
   }
   
   .statsGrid {

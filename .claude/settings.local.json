@@ -22,7 +22,8 @@
       "Bash(npx next build:*)",
       "Bash(git pull:*)",
       "Bash(git checkout:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(gh run list:*)"
     ],
     "deny": [],
     "ask": []

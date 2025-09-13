@@ -80,10 +80,10 @@ export default function Leaderboards() {
             <h1 className="gradient-text">CrTiers</h1>
           </div>
           <div className={styles.navLinks}>
-            <a href="/crtiers-remake/" className={styles.navLink}>Home</a>
-            <a href="/crtiers-remake/leaderboards" className={styles.navLink}>Leaderboards</a>
-            <a href="/crtiers-remake/server" className={styles.navLink}>Server</a>
-            <a href="/crtiers-remake/more" className={styles.navLink}>More</a>
+            <a href="/" className={styles.navLink}>Home</a>
+            <a href="/leaderboards" className={styles.navLink}>Leaderboards</a>
+            <a href="/server" className={styles.navLink}>Server</a>
+            <a href="/more" className={styles.navLink}>More</a>
           </div>
         </nav>
       </header>
