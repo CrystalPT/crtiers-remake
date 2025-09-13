@@ -21,7 +21,8 @@
       "Bash(timeout 120 npm run build)",
       "Bash(npx next build:*)",
       "Bash(git pull:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
